@@ -1,5 +1,5 @@
 # SUMMARY
-This Project is intended to carry out a game of Pinochle
+This Project is intended to carry out a game of Auction Pinochle
 
 ## Rules
 There are many variations of the rules for the game Pinochle, below are any clarifications deemed necessary
