@@ -7,7 +7,7 @@ There are many variations of the rules for the game Pinochle, below are any clar
 * After meld the bid taker may choose to skip the trick taking phase
 
 
-##Scoring
+## Scoring
 Run                  (A,T,K,Q,J of Trump)             - 15
 Double Run           (A,T,K,Q,J of Trump)             - 150
 Deece                (9 of Trump)                     - 1
@@ -27,4 +27,4 @@ Jacks Around         (J,J,J,J of Each Suit)           - 4
 Double Jacks Around  (J,J,J,J,J,J,J,J)                - 40
 
 # COPYRIGHT
-[License](https://github.com/MABradley/Pinochle/blob/master/LICENSE.txt)
+[License](https://github.com/MABradley/Pinochle/blob/master/LICENCSE)
