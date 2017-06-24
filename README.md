@@ -9,7 +9,7 @@ There are many variations of the rules for the game Pinochle, below are any clar
 
 ## Scoring
 |Meld|Requirements|Value|Double|
-|---|---|---:|
+|---|---|---:|---:|
 |Run | (A,T,K,Q,J of Trump) | 15|150|
 |Deece | (9 of Trump) | 1|2|
 |Marriage | (K,Q of Non-Trump) | 2|4|
