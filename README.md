@@ -8,7 +8,8 @@ There are many variations of the rules for the game Pinochle, below are any clar
 
 
 ## Scoring
-|Meld|Requirements|Value|Double|
+# Meld
+|Meld|Requirements|Single|Double|
 |---|---|---:|---:|
 |Run | (A,T,K,Q,J of Trump) | 15|150|
 |Deece | (9 of Trump) | 1|2|
@@ -19,6 +20,10 @@ There are many variations of the rules for the game Pinochle, below are any clar
 |Kings Around | (K,K,K,K of Each Suit) | 8|80|
 |Queens Around | (Q,Q,Q,Q of Each Suit) | 6|60|
 |Jacks Around | (J,J,J,J of Each Suit) | 4|40|
+
+# Tricks
+The Ace, Ten, and King are each worth one point.
+The last trick is worth one point.
 
 # COPYRIGHT
 [License](https://github.com/MABradley/Pinochle/blob/master/LICENCSE)
