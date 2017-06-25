@@ -36,6 +36,6 @@ namespace Pinochle
         {
         }
 
-        public string toString { get { return Face.GetName + " of " + Suit.GetName; } }
+        public override string ToString() { return Enum.GetName(typeof(Face), Face) + " of " + Enum.GetName(typeof(Suit), Suit); }
     }
 }

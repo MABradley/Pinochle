@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Pinochle
 { 
@@ -9,6 +10,12 @@ namespace Pinochle
 
         public Game()
         {
+        }
+
+        public Game(List<Player> players)
+        {
+            Players = players;
+            Rounds = new List<Round>();
         }
     }
 }
