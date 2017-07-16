@@ -29,6 +29,26 @@ namespace Pinochle
         {
         }
 
+        public Card(Suit suit, Face face)
+        {
+            Suit = suit;
+            Face = face;
+        }
+
+        public override bool Equals(System.Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            Card p = obj as Card;
+            if ((System.Object)p == null)
+            {
+                return false;
+            }
+            return (Face == p.Face) && (Suit == p.Suit);
+        }
+
         public override string ToString() { return Enum.GetName(typeof(Face), Face) + " of " + Enum.GetName(typeof(Suit), Suit); }
     }
 }

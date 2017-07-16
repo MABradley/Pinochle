@@ -18,5 +18,20 @@ namespace Pinochle
             Players = players;
             Rounds = new List<Round>();
         }
+
+        public List<Card> GenerateDeck()
+        {
+            List<Card> result = new List<Card>();
+            foreach (Suit suit in Enum.GetValues(typeof(Suit)))
+            {
+                foreach (Face face in Enum.GetValues(typeof(Face)))
+                {
+                    result.Add(new Card(suit, face));
+                    result.Add(new Card(suit, face));
+                }
+            }
+            result.Shuffle();
+            return result;
+        }
     }
 }
