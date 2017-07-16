@@ -28,6 +28,12 @@ namespace Pinochle
             throw new NotImplementedException();
         }
 
+        public virtual List<Card> TradeCards(Round round)
+        {
+            // Derived Class WIll Implement
+            throw new NotImplementedException();
+        }
+
         public Player(string name, bool isEvil)
         {
             Name = name;
