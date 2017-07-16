@@ -24,8 +24,8 @@ namespace PinochleConsole
             //Create Game
             Game game = new Game(players);
             //Bidding
-            game.Rounds.Add(new Round());
-            game.CurrentRound.PerformBidding(game.Players);
+            game.Rounds.Add(new Round(players));
+            game.CurrentRound.PerformBidding();
             Console.WriteLine("The Contract is " + game.CurrentRound.Bid + " bid by " + game.CurrentRound.HighestBidder.ToString());
             //Teardown
             Console.WriteLine("Press any key to close...");
