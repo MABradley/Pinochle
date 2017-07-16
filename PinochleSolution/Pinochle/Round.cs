@@ -8,12 +8,26 @@ namespace Pinochle
         public int?   Bid           { get; set; }
         public Player HighestBidder { get; set; }
         public Suit?  Trump         { get; set; }
+        
+        public Dictionary<Player, List<Card>> Hands { get; set; }
 
         public Round()
         {
         }
 
-        public void PreformBidding(List<Player> players)
+        public Round PlayerRound(Player p)
+        {
+            var PRound = new Round();
+            PRound.Bid = this.Bid;
+            PRound.HighestBidder = this.HighestBidder;
+            PRound.Trump = this.Trump;
+
+
+
+            return PRound;
+        }
+
+        public void PerformBidding(List<Player> players)
         {
             //todo: allow players to see historical bids
             HashSet<Player> hasPassed = new HashSet<Player>();

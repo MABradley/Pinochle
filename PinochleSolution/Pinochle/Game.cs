@@ -5,8 +5,9 @@ namespace Pinochle
 { 
     public class Game
     {
-        public List<Player> Players { get; set; }
-        public List<Round>  Rounds  { get; set; }
+        public List<Player> Players         { get; set; }
+        public List<Round>  Rounds          { get; set; }
+        public Round        CurrentRound    { get { return Rounds[Rounds.Count - 1]; } }
 
         public Game()
         {
