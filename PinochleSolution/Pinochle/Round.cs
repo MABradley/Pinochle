@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Pinochle
 {
     public class Round
     {
-        public int?             Bid             { get; set; }
-        public Player           HighestBidder   { get; set; }
         public Suit?            Trump           { get; set; }
         private List<Player>    Players         { get; set; }
+        public Dictionary<int, Player>  Bids    { get; set; }
         
         public List<Card> Hand { get; set; } // This will contain a shallow copy of the player's hand from Hands
         private Dictionary<Player, List<Card>> Hands { get; set; }
@@ -38,7 +38,6 @@ namespace Pinochle
 
         public void PerformBidding()
         {
-            //todo: allow players to see historical bids
             HashSet<Player> hasPassed = new HashSet<Player>();
             bool stillBidding = true;
             do
@@ -63,7 +62,7 @@ namespace Pinochle
                             break;
                         }
                     }
-                    else if (Bid.HasValue && playerBid <= Bid)
+                    else if (Bids.Count > 0 && playerBid <= Bids.Keys.Max())
                     {
                         throw new Exception(player.Name + " has bid at or below the current bid.");
                     }
@@ -71,8 +70,7 @@ namespace Pinochle
                     {
                         throw new Exception(player.Name + " has bid at or below the minimum bid of 10.");
                     }
-                    Bid = playerBid;
-                    HighestBidder = player;
+                    Bids.Add(playerBid.Value, player);
                 }
                 if (hasPassed.Count > 2)
                 {
@@ -80,8 +78,8 @@ namespace Pinochle
                 }
             }
             while (stillBidding);
-            SetHand(HighestBidder);
-            Trump = HighestBidder.ChooseTrump(this);
+            SetHand(Bids[Bids.Keys.Max()]);
+            Trump = Bids[Bids.Keys.Max()].ChooseTrump(this);
         }
 
         public void TradeCards()
